@@ -6,3 +6,8 @@ kmeans = KMeans(n_clusters=3, random_state=0).fit(P)
 print(kmeans.cluster_centers_)
 # Getting the labels(IDs of each of the cluster points)
 print(kmeans.labels_)
+# Visualizing and plotting the clusters centers and all the data points
+plt.scatter(P[:, 0], P[:, -1])
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], c='red', marker='x')
+plt.title('Data points and cluster centroids')
+plt.show()
