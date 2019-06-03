@@ -1,0 +1,8 @@
+# Using scikit-learn for calculating K-Means
+from sklearn.cluster import KMeans
+# Specifying the number of clusters which is 3 here  and then fit the data P
+kmeans = KMeans(n_clusters=3, random_state=0).fit(P)
+# Getting centroids of the clusters
+print(kmeans.cluster_centers_)
+# Getting the labels(IDs of each of the cluster points)
+print(kmeans.labels_)
